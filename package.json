@@ -4,7 +4,8 @@
   "description": "Network programming with Go",
   "main": "index.html",
   "dependencies": {
-    "gitbook-cli": "2.3.0"
+    "gitbook-cli": "2.3.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -13,7 +14,9 @@
     "gitbook:build": "npm run gitbook:prepare && rm -rf _book && gitbook build",
     "gitbook:pdf": "gitbook pdf . ./_book/network-programming-with-go.pdf",
     "gitbook:epub": "gitbook epub . ./_book/network-programming-with-go.epub",
-    "gitbook:mobi": "gitbook mobi . ./_book/network-programming-with-go.mobi"
+    "gitbook:mobi": "gitbook mobi . ./_book/network-programming-with-go.mobi",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -27,5 +30,6 @@
   "bugs": {
     "url": "https://github.com/tumregels/Network-Programming-with-Go/issues"
   },
-  "homepage": "https://github.com/tumregels/Network-Programming-with-Go#readme"
+  "homepage": "https://github.com/tumregels/Network-Programming-with-Go#readme",
+  "snyk": true
 }
